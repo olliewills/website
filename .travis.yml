@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- "lts/*"
+before_deploy:
+- test $TRAVIS_TEST_RESULT = 0
+before_install:
+- npm install -g mocha
+deploy:
+- provider: script    # (If version.txt is updated) - create a new tag and push to Github, update the latest-release branch
+  script: chmod +x ./create-release.sh && ./create-release.sh
+  on: master
+notifications:
+  email: false
+sudo: false
+env:
+  global:

@@ -1,0 +1,54 @@
+{
+  "name": "ollie-williams-website",
+  "version": "0.1.0",
+  "private": false,
+  "authors": [
+    "Ollie Williams"
+  ],
+  "description": "The personal website of Ollie Williams",
+  "keywords": [
+    "Gulp",
+    "Bower",
+    "NodeJS",
+    "Express"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "govuk_modules",
+    "public",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.min.css",
+        "dist/js/bootstrap.min.js",
+        "dist/fonts/glyphicons-halflings-regular.eot",
+        "dist/fonts/glyphicons-halflings-regular.svg",
+        "dist/fonts/glyphicons-halflings-regular.ttf",
+        "dist/fonts/glyphicons-halflings-regular.woff",
+        "dist/fonts/glyphicons-halflings-regular.woff2"
+         ]
+    },
+    "fontawesome": {
+      "main": [
+           "css/font-awesome.css",
+           "fonts/fontawesome-webfont.eot",
+           "fonts/fontawesome-webfont.svg",
+           "fonts/fontawesome-webfont.ttf",
+           "fonts/fontawesome-webfont.woff",
+           "fonts/fontawesome-webfont.woff2"
+         ]
+    }
+  },
+  "dependencies": {
+    "bootstrap": "4.0.0-beta",
+    "jquery": "latest",
+    "fontawesome": "latest",
+    "raphael": "latest"
+  }
+}
