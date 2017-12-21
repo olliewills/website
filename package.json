@@ -1,8 +1,10 @@
 {
   "name": "ollie-williams-website",
   "description": "The personal website of Ollie Williams",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "license": "MIT",
+  "author": "Ollie Williams",
+  "homepage": "http://www.olliewilliams.co.uk/",
   "repository": {
     "type": "git",
     "url": "https://github.com/olliewills/portfolio.git"
