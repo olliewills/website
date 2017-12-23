@@ -57,7 +57,7 @@
     "gulp-uglify": "3.0.0",
     "gulp-util": "3.0.8",
     "jquery": "^3.2.1",
-    "marked": "0.3.7",
+    "marked": "0.3.9",
     "minimist": "1.2.0",
     "numeral": "2.0.6",
     "nunjucks": "3.0.1",
