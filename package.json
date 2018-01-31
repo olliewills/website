@@ -73,7 +73,7 @@
     "serve-favicon": "2.4.5",
     "standard": "10.0.3",
     "supertest": "3.0.0",
-    "sync-request": "4.1.0"
+    "sync-request": "5.0.0"
   },
   "greenkeeper": {
     "ignore": [
