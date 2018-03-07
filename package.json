@@ -63,7 +63,7 @@
     "nunjucks": "3.0.1",
     "popper.js": "^1.12.9",
     "portscanner": "2.1.1",
-    "postmark": "1.5.0",
+    "postmark": "1.6.0",
     "prompt": "1.0.0",
     "raphael": "^2.2.7",
     "readdir": "0.0.13",
