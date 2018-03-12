@@ -67,7 +67,7 @@
     "prompt": "1.0.0",
     "raphael": "^2.2.7",
     "readdir": "0.0.13",
-    "request": "2.83.0",
+    "request": "2.84.0",
     "require-dir": "0.3.2",
     "run-sequence": "2.2.0",
     "serve-favicon": "2.4.5",
