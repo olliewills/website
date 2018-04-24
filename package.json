@@ -66,7 +66,7 @@
     "postmark": "1.5.0",
     "prompt": "1.0.0",
     "raphael": "^2.2.7",
-    "readdir": "0.0.13",
+    "readdir": "0.1.0",
     "request": "2.83.0",
     "require-dir": "0.3.2",
     "run-sequence": "2.2.0",
