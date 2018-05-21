@@ -20,7 +20,7 @@
     "test": "gulp test && npm run lint"
   },
   "dependencies": {
-    "async": "2.6.0",
+    "async": "2.6.1",
     "basic-auth": "2.0.0",
     "basic-auth-connect": "1.0.0",
     "body-parser": "1.18.2",
