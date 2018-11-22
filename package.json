@@ -52,6 +52,11 @@
       "nunjucks"
     ]
   },
+  "standard": {
+    "ignore": [
+      "/app/views/components/header/header.js"
+    ]
+  },
   "devDependencies": {
     "jest": "^23.6.0",
     "standard": "^11.0.1",
