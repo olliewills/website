@@ -1,0 +1,63 @@
+{% extends "my-layout.html" %}
+
+{% block pageTitle %}
+  Contact me: Ollie Williams, user experience designer
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Contact me
+      </h1>
+      <p>
+        Use the form below if you'd like to speak to me about a new project or role.
+      </p>
+      <form action="" method="post">
+        <div class="govuk-form-group">
+          {{ govukInput({
+            label: {
+              text: "Message subject"
+            },
+            id: "subject",
+            name: "subject"
+          }) }}
+        </div>
+        <div class="govuk-form-group">
+          {{ govukTextarea({
+            name: "message",
+            id: "message",
+            label: {
+              text: "Your message"
+            }
+          }) }}
+        </div>
+        <div class="govuk-form-group">
+          {{ govukInput({
+            label: {
+              text: "Your name"
+            },
+            id: "name",
+            name: "name"
+          }) }}
+        </div>
+        <div class="govuk-form-group">
+          {{ govukInput({
+            label: {
+              text: "Your email address"
+            },
+            id: "email",
+            name: "email"
+          }) }}
+        </div>
+        <div class="govuk-form-group">
+          {{ govukButton({
+            text: "Send message"
+          }) }}
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

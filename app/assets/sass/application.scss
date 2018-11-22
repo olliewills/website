@@ -1,31 +1,88 @@
-// Path to assets for use with the file-url function
-// in the govuk frontend toolkit's url-helpers partial
-$path: "/public/images/";
+$govuk-global-styles: true;
+$govuk-font-family: 'ministry', Arial, sans-serif;
+$govuk-font-weight-regular: 300;
+$govuk-font-weight-bold: 500;
 
-// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
-// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
-@import 'govuk-elements';
+// Import GOV.UK Frontend
+@import "node_modules/govuk-frontend/all";
 
-// Take a look at in app/assets/sass/patterns/ to see which files are imported.
-@import 'patterns/check-your-answers';
-@import 'patterns/task-list';
+// Patterns that aren't in Frontend
+@import "patterns/check-your-answers";
+@import "patterns/step-by-step-navigation";
+@import "patterns/task-list";
+@import "patterns/related-items";
 
-// Related items
-// (These styles will be moved to GOV.UK elements, duplicating here for now.)
-.govuk-related-items {
-  margin-top: $gutter;
-  border-top: 10px solid $govuk-blue;
-  padding-top: 5px;
-
-  .heading-medium {
-    margin-top: 0.3em;
-    margin-bottom: 0.5em;
-  }
-
-  li {
-    margin-bottom: 10px;
-    list-style-type: none;
-  }
-}
+// Components that aren't in Frontend
+@import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+.govuk-template {
+  background-color: govuk-colour("grey-4");
+}
+
+.govuk-header {
+  background: govuk-colour("orange");
+  border-bottom: none;
+}
+
+.govuk-header__container {
+  border-bottom: 1px solid rgba(255,255,255, 0.8);
+  margin-bottom: -1px;
+}
+
+.govuk-header__navigation {
+  text-align: right;
+}
+
+.govuk-header__navigation-item--active a:hover,
+.govuk-header__navigation-item--active a:link,
+.govuk-header__navigation-item--active a:visited {
+  color: govuk-colour("white");
+}
+
+.govuk-header__navigation-item a {
+  font-weight: 300;
+}
+
+.govuk-header__navigation-item--active a {
+  font-weight: 500;
+}
+
+.govuk-footer {
+  background-color: govuk-colour("grey-4");
+  border-top-color: govuk-colour("grey-3");
+}
+
+.banner-container {
+  background: govuk-colour("orange");
+}
+
+/*** BANNER STYLES ***/
+.banner-container {
+  padding-bottom: 4em;
+}
+
+.banner-container--centred {
+  text-align: center;
+}
+
+.banner-container__title {
+  color: govuk-colour("white");
+}
+
+.avatar-container {
+  border: 15px solid rgba(255, 255, 255, 0.5);
+  border-radius: 200px;
+  display: block;
+  margin: 0 auto;
+  height: 220px;
+  width: 220px;
+  overflow: hidden;
+}
+
+.avatar-container__image {
+  border: 10px solid govuk-colour("white");
+  border-radius: 200px;
+  overflow: hidden;
+  width: 200px;
+}

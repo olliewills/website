@@ -1,11 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
-// Route index page
-router.get('/', function (req, res) {
-  res.render('index')
+router.post('/contact-me', function (req, res) {
+  req.session.userEmail = req.body.email
+  res.redirect('message-sent')
 })
-
-// Add your routes here - above the module.exports line
 
 module.exports = router
