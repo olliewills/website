@@ -4,22 +4,29 @@
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
-  websiteName: 'Ollie Williams',
+  serviceName: 'Ollie Williams',
 
   // Default port that prototype runs on
-  port: '3000',
+  port: '31283',
 
   // Enable or disable password protection on production
-  useAuth: 'true',
+  useAuth: 'false',
 
   // Automatically stores form data, and send to all views
   useAutoStoreData: 'false',
 
+  // Enable cookie-based session store (persists on restart)
+  // Please note 4KB cookie limit per domain, cookies too large will silently be ignored
+  useCookieSessionStore: 'true',
+
+  // Enable or disable built-in docs and examples.
+  useDocumentation: 'false',
+
   // Force HTTP to redirect to HTTPS on production
-  useHttps: 'false',
+  useHttps: 'true',
 
   // Cookie warning - update link to service's cookie page.
-  cookieText: 'This website uses cookies to help me make improvements. <a href="#">Find out more <span class="visuallyhidden">about the cookies used</span></a>',
+  cookieText: 'This website uses cookies to store some information. <a href="#">Find out more about cookies</a>',
 
   // Enable or disable Browser Sync
   useBrowserSync: 'true'

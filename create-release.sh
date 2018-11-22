@@ -1,21 +1,17 @@
 #!/bin/bash
 set -e
 
-REPO_PATH='olliewills/website'
+REPO_PATH='alphagov/govuk-prototype-kit'
 
-echo "Add config for $REPO_PATH"
+echo "Add config for alphagov/$REPO_PATH"
 
 git config --global user.name "Travis CI"
 git config --global user.email "travis@travis-ci.org"
 git remote add origin_ssh git@github.com:$REPO_PATH.git
 
-openssl aes-256-cbc -K $encrypted_584628109d7a_key -iv $encrypted_584628109d7a_iv -in .travis/deploy_key.enc -out deploy_key -d
-
-chmod 600 deploy_key
-
-eval $(ssh-agent -s)
-
-ssh-add deploy_key
+# This openssl command was generated automatically by `travis encrypt-file`, see `.travis/README.md` for more details
+openssl aes-256-cbc -K $encrypted_a0ab9bc5246b_key -iv $encrypted_a0ab9bc5246b_iv -in .travis/govuk_prototype_kit.enc -out ~/.ssh/id_rsa -d
+chmod 600 ~/.ssh/id_rsa
 
 echo "Check to see if the version file has been updated"
 
@@ -31,7 +27,6 @@ if ! git rev-parse $VERSION_TAG >/dev/null 2>&1; then
 
   # Create a new tag and push to Github
   git tag $VERSION_TAG
-
   git push origin_ssh $VERSION_TAG
 
   # This tag will trigger the builds for the deploy providers marked "# For tagged commits" in .travis.yml
