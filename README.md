@@ -1,35 +1,35 @@
-# GOV.UK Prototype Kit · [![Greenkeeper badge](https://badges.greenkeeper.io/alphagov/govuk-prototype-kit.svg)](https://greenkeeper.io/)
+# Ollie Williams Website Build
 
-Go to the [GOV.UK Prototype Kit site](https://govuk-prototype-kit.herokuapp.com/docs) to download the latest version and read the documentation.
+[![Greenkeeper badge](https://badges.greenkeeper.io/olliewills/website.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/olliewills/website.svg?branch=master)](https://travis-ci.org/olliewills/website)
 
-## About the Prototype Kit
+## About this repository
 
-The Prototype Kit provides a simple way to make interactive prototypes that look like pages on GOV.UK. These prototypes can be used to show ideas to people you work with, and to do user research.
+This repo contains all the code used to build my personal website, [www.olliewilliams.co.uk](http://www.olliewilliams.co.uk). I've tried to answer a few potential questions you may have in the sections below. Hopefully this will be everything you need to know about the code in this repo. If there's anything missing, get in touch and let me know.
 
-Read the [project principles](https://govuk-prototype-kit.herokuapp.com/docs/principles).
+### Why is your website on GitHub?
 
-## Security
+I've used traditional web hosting companies and PHP websites for years. They work perfectly well but when it came time for me to update my website I decided I want it hosted on a modern platform, something that gives me complete flexibility. I also want to use a modern development toolset and follow the latest industry standards, processes and techniques.
 
-If you publish your prototypes online, they **must** be protected by a [username and password](https://govuk-prototype-kit.herokuapp.com/docs/publishing-on-heroku). This is to prevent members of the public finding prototypes and thinking they are real services.
+GitHub, in combination with Heroku, gives me everything I want and need from a hosting platform. I now have almost complete control over how my website is delivered to users. That control is worth a lot to me. It gives me room to grow and *that* is essential for anyone who labels themselves as a creative!
 
-You must protect user privacy at all times, even when using prototypes. Prototypes made with the kit look like GOV.UK, but do not have the same security provisions. Always make sure you are handling user data appropriately.
+### Isn't this all 'a bit much' for a simple portfolio website?
 
-## Installation instructions
+It's easy to see it that way, yes. I could have just created a Wordpress website and let it do all the hard work for me. Tools like GitHub and Heroku may look complicated from the outside but a lot of good work has been done to make them easy to understand and use.
 
-- [Installation guide for new users (non technical)](https://govuk-prototype-kit.herokuapp.com/docs/install/introduction)
-- [Installation guide for developers (technical)](https://govuk-prototype-kit.herokuapp.com/docs/install/developer-install-instructions)
+These tools, in combination with others, will help me build a robust website and also reinforce many of my technical skills.
 
-## Support
+### I though you were a UX/Interaction designer, not a developer?
 
-The GOV.UK Prototype Kit is maintained by the Government Digital Service. If you’ve got a question or need support you can:
+You thought right! I absolutely am a UX'er but I do have a background in web development and it's something I embrace. On more than one occasion I've relied on this background to help me clearly communicate an idea to a dev team and get their buy-in.
 
-* email [govuk-design-system-support@digital.cabinet-office.gov.uk](mailto:govuk-design-system-support@digital.cabinet-office.gov.uk) 
-* [get in touch on Slack](https://ukgovernmentdigital.slack.com/messages/prototype-kit)([open in app](slack://channel?team=T04V6EBTR&amp;id=C0647LW4R)) 
-* [view known issues on GitHub](https://github.com/alphagov/govuk-prototype-kit/issues)
-        
-## Contributing
+You can find out more about how I work in the ['About Me'](http://www.olliewilliams.co.uk/about-me/) section.
 
-If you’ve got an idea or suggestion you can:
+### So what tools are you actually using?
+A complete list of the tools I'l be using to build my website can be found [here](TOOLS.md).
 
-* [get in touch on the developer Slack channel](https://ukgovernmentdigital.slack.com/messages/prototype-kit-dev)([open in app](slack://channel?team=T04V6EBTR&amp;id=C0E1063DW))
-* [create a GitHub issue](https://github.com/alphagov/govuk-prototype-kit/issues)
+### Can I fork or contribute to the website?
+
+Yes! I could have made this repo private but I'm happy to give anyone a look behind the curtain. If you find an error on the site, in the content or the functionality, you can raise an issue to let me know about it.
+
+Most of the code used here is fairly basic but if you see something you can use or learn from then that's great.

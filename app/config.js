@@ -23,7 +23,7 @@ module.exports = {
   useDocumentation: 'true',
 
   // Force HTTP to redirect to HTTPS on production
-  useHttps: 'true',
+  useHttps: 'false',
 
   // Cookie warning - update link to service's cookie page.
   cookieText: 'This website uses cookies to store some information. <a href="#">Find out more about cookies</a>',
