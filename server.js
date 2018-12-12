@@ -178,8 +178,8 @@ app.use(function (req, res, next) {
 // Add variables that are available in all views
 app.locals.gtmId = gtmId
 app.locals.asset_path = '/public/'
-app.locals.useAutoStoreData = (useAutoStoreData === 'true')
-app.locals.useCookieSessionStore = (useCookieSessionStore === 'true')
+app.locals.useAutoStoreData = (useAutoStoreData === 'false')
+app.locals.useCookieSessionStore = (useCookieSessionStore === 'false')
 app.locals.cookieText = config.cookieText
 app.locals.promoMode = promoMode
 app.locals.releaseVersion = 'v' + releaseVersion

@@ -35,11 +35,17 @@
             <h2 class="govuk-visually-hidden">Support links</h2>
             <ul class="govuk-footer__inline-list">
               {% for item in params.meta.items %}
-                <li class="govuk-footer__inline-list-item">
-                  <a class="govuk-footer__link" href="{{ item.href }}" {% for attribute, value in item.attributes %} {{attribute}}="{{value}}" {% endfor %}>
+                {% if item.href === '' %}
+                  <li class="govuk-footer__inline-list-item">
                     {{ item.text }}
-                  </a>
-                </li>
+                  </li>
+                {% else %}
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="{{ item.href }}" {% for attribute, value in item.attributes %} {{attribute}}="{{value}}" {% endfor %}>
+                      {{ item.text }}
+                    </a>
+                  </li>
+                {% endif %}
               {% endfor %}
             </ul>
           {% endif %}

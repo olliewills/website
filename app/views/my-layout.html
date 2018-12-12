@@ -52,39 +52,25 @@
         text: "About me"
       },
       {
-        href: "gallery",
-        text: "Gallery"
-      },
-      {
-        href: "contact-me",
-        text: "Contact me"
+        href: "work",
+        text: "Work"
       }
     ]
   }) }}
 {% endblock %}
 
-{% if useAutoStoreData %}
-  {% block footer %}
-    {{ myFooter({
+{% block footer %}
+  {{ myFooter({
       meta: {
         items: [
           {
-            href: "https://govuk-prototype-kit.herokuapp.com/",
-            text: "GOV.UK Prototype Kit " + releaseVersion
-          },
-          {
-            href: "/prototype-admin/clear-data",
-            text: "Clear data"
-          },
-          {
             href: "",
-            html: "&copy; Copyright Oliver Williams 2018"
+            text: "© 2018 Oliver Williams"
           }
         ]
       }
     }) }}
-  {% endblock %}
-{% endif %}
+{% endblock %}
 
 {% block bodyEnd %}
   {% block scripts %}

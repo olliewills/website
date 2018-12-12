@@ -12,6 +12,8 @@ $govuk-font-weight-bold: 500;
 @import "patterns/task-list";
 @import "patterns/related-items";
 
+@import "patterns/jquery.fancybox.min";
+
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 
@@ -85,4 +87,42 @@ $govuk-font-weight-bold: 500;
   border-radius: 200px;
   overflow: hidden;
   width: 200px;
+}
+
+.faces-container {}
+
+.faces-container__face {
+  text-align: center;
+}
+
+.work-list {
+  margin-left: -4%;
+  overflow: auto;
+  padding-top: 3px;
+
+  li {
+    display: block;
+    float: left;
+    margin-left: 4%;
+    margin-bottom: 6%;
+    width: 45%;
+    position: relative;
+    @include govuk-media-query($from: tablet) {
+      width: 22.5%;
+    }
+  }
+
+  a {
+    outline: 3px solid govuk-colour('grey-2');
+    transition: outline .25s;
+
+    &:hover {
+      outline: 3px solid govuk-colour('orange');
+    }
+  }
+
+  img {
+    width: 100%;
+
+  }
 }
