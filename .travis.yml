@@ -5,7 +5,7 @@ before_deploy:
 - test $TRAVIS_TEST_RESULT = 0
 deploy:
 - provider: script    # (If version.txt is updated) - create a new tag and push to Github, update the latest-release branch
-  script: ./create-release.sh
+  script: chmod +x ./create-release.sh && ./create-release.sh
   on: master
   # Automatic deploys are enabled in Heroku for this app
   # Every push to master will deploy a new version of this app. Deploys happen automatically.
@@ -16,4 +16,3 @@ sudo: false
 env:
   global:
   - secure: i3dhNMMhqJOeZJ7FN3oMKEcstRas33eo4sn3H9uCREVWUASifqkD4hhiRxB0eMuJOsJh9KkGhlnq18mBePc+IxbTLR9qNJ26dYWxpe/Zp2tNzNWtoOZlWQ0vfZL8L65Jh5ULhJYjT6VvMdZqfAg8VaiurF6cbcIALbiQq9HakEg2NvCY7uBTkdL8pXYb1fwn05dbvJ/o10U6NuZeVCAcmVwt7A00SF0I4vWnCOev1z8UEWLN/wUhxW7gFwmsqbbw5xc7RjRVfxi/xBjbz6ay4J/uFG/krPwIbETCU+OPiCtYCwSl5z+jHTeT7IZK3qa7xqLGE3m09Z//LWobDmWSOsM5Q0dgngt0o9sz9yUE2pN4fWf2BNCK6orV1ZO0pAjdrK3qn4Sr90/JnYfWlPMJpSMA7WW1om0jVTzHNhU7Rro7rmCe6OF1EZWZ+RgtMKJ3HTHX5OGnlC1vD688uUGV96xF3oUop0w6UxBww3rkhnJD4JA4Z1ARmPMx6rN8xvC7B74bwgxtDaebrXtkcCspGm9rKhfJYt9gBjy3qcEcQ/4LCYT5RmiEZXEgEUJfzrhY49NMQcIgEa+PQ6GdCP382IFOxNVODMHtFoFEuVtK4ByXkjtdmv6mfWXLCPsPot/RegWifv3hagtFkSbWyiO73Mauqvmw8rSGcZbDjF3f0SQ=
-  
