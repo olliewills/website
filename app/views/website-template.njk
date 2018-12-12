@@ -1,0 +1,73 @@
+{% from "skip-link/macro.njk" import govukSkipLink -%}
+{% from "./components/header/macro.njk" import myHeader %}
+{% from "./components/footer/macro.njk" import myFooter %}
+{# specify absolute url for the static assets folder e.g. http://wwww.domain.com/assets #}
+{%- set assetUrl = assetUrl | default(assetPath) -%}
+<!DOCTYPE html>
+<html lang="{{ htmlLang | default('en') }}" class="govuk-template {{ htmlClasses }}">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-34364358-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'UA-34364358-1')
+    </script>
+
+    <meta charset="utf-8"/>
+    <title>
+      {% block pageTitle %}Ollie Williams: User Experience Designer{% endblock %}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="{{ themeColor | default('#0b0c0c') }}"/>
+
+    {% block headIcons %}
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/public/images/fav/favicon.ico" type="image/x-icon"/>
+    {% endblock %}
+
+    {% block head %}{% endblock %}
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+  </head>
+  <body class="govuk-template__body {{ bodyClasses }}">
+    <script>
+      document.body.className = (
+        (document.body.className)
+          ? document.body.className + ' js-enabled'
+          : 'js-enabled'
+      );
+    </script>
+    {% block bodyStart %}{% endblock %}
+
+    {% block skipLink %}
+      {{ govukSkipLink({
+        href: '#main-content',
+        text: 'Skip to main content'
+      }) }}
+    {% endblock %}
+
+    {% block header %}
+      {{ myHeader({}) }}
+    {% endblock %}
+
+    {% block banner %}{% endblock %}
+
+    {% block main %}
+      <div class="govuk-width-container">
+        {% block beforeContent %}{% endblock %}
+        <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main">
+          {% block content %}{% endblock %}
+        </main>
+      </div>
+    {% endblock %}
+
+    {% block footer %}
+      {{ myFooter({}) }}
+    {% endblock %}
+
+    {% block bodyEnd %}{% endblock %}
+  </body>
+</html>

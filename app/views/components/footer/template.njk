@@ -1,0 +1,61 @@
+<footer class="govuk-footer {{ params.classes if params.classes }}" role="contentinfo" {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}" {% endfor %}>
+  <div class="govuk-width-container {{ params.containerClasses if params.containerClasses }}">
+    {% if params.navigation %}
+      <div class="govuk-footer__navigation">
+        {% for item in params.navigation %}
+          <div class="govuk-footer__section">
+            <h2 class="govuk-footer__heading govuk-heading-m">{{ item.title }}</h2>
+            {% if item.items %}
+              {% set listClasses %}
+              {% if item.columns %}
+                govuk-footer__list--columns-{{ item.columns }}
+              {% endif %}
+              {% endset %}
+              <ul class="govuk-footer__list {{ listClasses | trim }}">
+                {% for item in item.items %}
+                  {% if item.href and item.text %}
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="{{ item.href }}" {% for attribute, value in item.attributes %} {{attribute}}="{{value}}" {% endfor %}>
+                        {{ item.text }}
+                      </a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      <hr class="govuk-footer__section-break">
+    {% endif %}
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        {% if params.meta %}
+          {% if params.meta.items %}
+            <h2 class="govuk-visually-hidden">Support links</h2>
+            <ul class="govuk-footer__inline-list">
+              {% for item in params.meta.items %}
+                {% if item.href === '' %}
+                  <li class="govuk-footer__inline-list-item">
+                    {{ item.text }}
+                  </li>
+                {% else %}
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="{{ item.href }}" {% for attribute, value in item.attributes %} {{attribute}}="{{value}}" {% endfor %}>
+                      {{ item.text }}
+                    </a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% if params.meta.text or params.meta.html %}
+            <div class="govuk-footer__meta-custom">
+              {{ params.meta.html | safe if params.meta.html else params.meta.text }}
+            </div>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</footer>
