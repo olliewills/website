@@ -3,7 +3,14 @@
 <script src="/node_modules/govuk-frontend/all.js"></script>
 <script src="/public/javascripts/application.js"></script>
 <script src="/public/javascripts/jquery.fancybox.min.js"></script>
+<script src="/public/javascripts/jquery.lazyload.min.js"></script>
 
 {% if useAutoStoreData %}
   <script src="/public/javascripts/auto-store-data.js"></script>
 {% endif %}
+
+<script type="text/javascript">
+  $(function () {
+    $('img.lazyload').lazyload({effect: 'fadeIn'})
+  })
+</script>
