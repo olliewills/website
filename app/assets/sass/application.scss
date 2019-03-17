@@ -1,7 +1,8 @@
 $govuk-global-styles: true;
 $govuk-font-family: 'ministry', Arial, sans-serif;
-$govuk-font-weight-regular: 300;
-$govuk-font-weight-bold: 500;
+$govuk-font-weight-regular: 100;
+$govuk-font-weight-bold: 300;
+$govuk-focus-colour: #4ebdfe;
 
 // Import GOV.UK Frontend
 @import "node_modules/govuk-frontend/all";
@@ -17,18 +18,23 @@ $govuk-font-weight-bold: 500;
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 
+// My colours
+$grey-0: #4c5458;
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 .govuk-template {
   background-color: govuk-colour("grey-4");
 }
 
 .govuk-header {
-  background: govuk-colour("orange");
+  background: $grey-0;
   border-bottom: none;
+  padding-bottom: 5px;
 }
 
 .govuk-header__container {
-  border-bottom: 1px solid rgba(255,255,255, 0.8);
+  // border-bottom: 1px solid rgba(255,255,255, 0.8);
+  border-bottom: none;
   margin-bottom: -1px;
 }
 
@@ -39,7 +45,11 @@ $govuk-font-weight-bold: 500;
 .govuk-header__navigation-item--active a:hover,
 .govuk-header__navigation-item--active a:link,
 .govuk-header__navigation-item--active a:visited {
-  color: govuk-colour("white");
+  color: #4ebdfe;
+}
+
+.govuk-header__navigation-item--active a:focus {
+  color: $govuk-text-colour;
 }
 
 .govuk-header__navigation-item a {
@@ -56,7 +66,7 @@ $govuk-font-weight-bold: 500;
 }
 
 .banner-container {
-  background: govuk-colour("orange");
+  background: govuk-colour("grey-1");
 }
 
 /*** BANNER STYLES ***/
@@ -73,17 +83,17 @@ $govuk-font-weight-bold: 500;
 }
 
 .avatar-container {
-  border: 15px solid rgba(255, 255, 255, 0.5);
+  border: 15px solid lighten(govuk-colour("light-blue"), 20%);
   border-radius: 200px;
   display: block;
   margin: 0 auto;
-  height: 220px;
-  width: 220px;
+  height: 230px;
+  width: 230px;
   overflow: hidden;
 }
 
 .avatar-container__image {
-  border: 10px solid govuk-colour("white");
+  border: 15px solid govuk-colour("light-blue");
   border-radius: 200px;
   overflow: hidden;
   width: 200px;
@@ -128,11 +138,11 @@ $govuk-font-weight-bold: 500;
   a {
     display: block;
     padding: 4px 4px 0;
-    background-color: govuk-colour('grey-2');
+    background-color: govuk-colour('light-blue');
     transition: background-color .25s;
 
     &:hover {
-      background-color: govuk-colour('orange');
+      background-color: #4ebdfe;
     }
   }
 
