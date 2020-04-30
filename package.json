@@ -45,7 +45,7 @@
     "run-sequence": "^2.2.1",
     "sync-request": "^6.0.0",
     "universal-analytics": "^0.4.16",
-    "uuid": "^3.2.1",
+    "uuid": "^8.0.0",
     "@fancyapps/fancybox": "^3.5.2"
   },
   "greenkeeper": {
